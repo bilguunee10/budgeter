@@ -1,5 +1,7 @@
 {
   "name": "expense",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
