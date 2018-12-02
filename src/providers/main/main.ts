@@ -26,6 +26,8 @@ export class MainProvider {
     {name:"Бусад", value:'others'}
   ]
 
+  lists = []
+
   constructor(public http: HttpClient) {
     console.log('Hello MainProvider Provider');
   }
@@ -38,6 +40,11 @@ export class MainProvider {
     } else {
       localStorage.setItem('budgetData',JSON.stringify([data]));
     }
+  }
+
+  getAllList(){
+    console.log("clicked")
+     this.lists = JSON.parse(localStorage.getItem("budgetData"));
   }
 
 }

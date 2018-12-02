@@ -14,5 +14,14 @@
 
 
 <ion-content padding>
-Ene bol Dashboard  
+<ion-list>
+  <ion-item *ngFor = "let list of main.lists ">
+
+     <ion-avatar item-start>
+      <img src="./assets/imgs/{{list.selectedCategory}}.png">
+    </ion-avatar>
+      {{list.description}}
+    
+  </ion-item>
+</ion-list>
 </ion-content>
