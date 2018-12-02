@@ -1,0 +1,49 @@
+<!--
+  Generated template for the OutcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Outcome</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<ion-item>
+    <ion-label floating>Тайлбар</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Дүн</ion-label>
+    <ion-input type="number"></ion-input>
+  </ion-item>
+    <ion-item>
+    <ion-label stacked>Огноо</ion-label>
+    <ion-input type="date"></ion-input>
+  </ion-item>
+
+  <ion-list>
+  <ion-item>
+    <ion-label>Төрөл</ion-label>
+    <ion-select [(ngModel)]="category">
+      <ion-option value="household">Байрны мөнгө</ion-option>
+      <ion-option value="grocery">Хүнс</ion-option>
+      <ion-option value="lunch">Хоол</ion-option>
+      <ion-option value="edu">Боловсрол</ion-option>
+      <ion-option value="transport">Унаа</ion-option>
+      <ion-option value="pet">Pet</ion-option>
+      <ion-option value="others">Бусад</ion-option>
+      
+    </ion-select>
+  </ion-item>
+</ion-list>
+<button ion-button full color="default">Нэмэх</button>
+
+
+</ion-content>
