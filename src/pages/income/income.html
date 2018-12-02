@@ -19,31 +19,28 @@
 
   <ion-item>
     <ion-label floating>Тайлбар</ion-label>
-    <ion-input type="text"></ion-input>
+    <ion-input type="text" [(ngModel)]="income.description"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Дүн</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input type="number" [(ngModel)]="income.amount"></ion-input>
   </ion-item>
     <ion-item>
     <ion-label stacked>Огноо</ion-label>
-    <ion-input type="date"></ion-input>
+    <ion-input type="date" [(ngModel)]="income.date"></ion-input>
   </ion-item>
 
   <ion-list>
   <ion-item>
     <ion-label>Төрөл</ion-label>
-    <ion-select [(ngModel)]="category">
-      <ion-option value="salary">цалин</ion-option>
-      <ion-option value="bonus">Бонус</ion-option>
-      <ion-option value="savings">хадгаламж хүү</ion-option>
-      <ion-option value="others">Бусад</ion-option>
-      
+    <ion-select [(ngModel)]="income.selectedCategory">
+      <ion-option *ngFor="let option of main.incomeCategory" value="{{option.value}}">{{option.name}}</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
-<button ion-button full color="default">Нэмэх</button>
+
+<button (click)="save()" ion-button full color="default">Нэмэх</button>
 
   	
 
